@@ -28,7 +28,8 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-apply plugin: "jacoco"
+apply plugin: 'jacoco'
+apply plugin: 'checkstyle'
 
 jacocoTestCoverageVerification {
      violationRules {
@@ -38,4 +39,8 @@ jacocoTestCoverageVerification {
                }
           }
      }
+}
+
+checkstyle {
+     checkstyleTest.enabled = true
 }
